@@ -1,0 +1,34 @@
+.main {
+   width: 100vw;
+   height: 100vh;
+   background: #000;
+   color: #fff;
+   text-align: center;
+   padding: 20px;
+}
+.title {
+    font-size: 36px;
+}
+.div {
+    max-width: 500px;
+    height: 500px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px auto;
+}
+.menu {
+    max-width: 100%;
+    height: 300px;
+
+    background: #fff;
+    border: inherit;
+    border-radius: inherit;
+    margin-bottom: 20px;
+    padding: 50px;
+    text-align: left;
+}
+.input, .push {
+    padding:5px;
+    font-size: 20px;
+}
