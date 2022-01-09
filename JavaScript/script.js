@@ -84,10 +84,75 @@ const title = document.querySelector('.title');
 
 // -t4
 
-function outZero(a, b, out, c = 0) {
-  c === b ? summ = c : summ = a + b;
-  out.innerHTML = summ;
+// function outZero(a, b, out, c) {
+//   c === b ? summ = c : summ = a + b;
+//   out.innerHTML = summ;
+// }
+// push.onclick = () => {
+//   outZero(5, +input.value, title, 2)
+// }
+
+// -t5
+
+// function task4(a, b, c = 1) {
+//   let summ = 0;
+//   if (b === c) {
+//     summ = c;
+//   } else {
+//     summ = a / b;
+//   }
+//   return console.log(summ)
+// }
+// task4(5, 1)
+
+// -t6
+const ar6 = [2, 3, 4, 5, 6, 'esr', 'fdfd']
+const st6 = 'fork'
+// function task6(out, block) {
+//   out.innerHTML = block.join(', ')
+// }
+// push.onclick = () => {
+//   task6(title, array)
+// }
+
+// -t7
+
+// function task7(out, array) {
+//   out.innerHTML = Array.isArray(array);
+// }
+// task7(title, ar6)
+// task7(menu, st6)
+
+// -8
+
+// function cleared(text, out) {
+//   out.innerHTML = text.trim().toLowerCase();
+// }
+// cleared(input.value, title);
+// cleared(input.value, menu);
+
+// -9
+
+// function task10(text, out) {
+//   let clearText = text.trim().toLowerCase()
+//   typeof clearText === 'string' ? out.innerHTML = clearText : out.innerHTML = 'error';
+// }
+
+// task10(input.value, menu)
+
+// -10
+
+// function inspect(...args) {
+//   console.log(args.length);
+// }
+// inspect(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1)
+
+// -11
+function inspect(...args) {
+  let accum = 0;
+  args.forEach(function (item) {
+    accum = accum + item;
+  })
+  console.log(accum)
 }
-push.onclick = () => {
-  outZero(5, +input.value, title)
-}
+inspect(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1)
