@@ -2,138 +2,44 @@ const push = document.querySelector('.push');
 const menu = document.querySelector('.menu');
 const input = document.querySelector('.input');
 const select = document.querySelector('.select');
-// function testFunction(a, b) {
-//   let c = a + b;
-//   menu.innerHTML = c;
+const title = document.querySelector('.title');
+
+
+// function f1(a = 10, b = 0, c = 0) {
+//   console.log(a + b + c)
 // }
-// push.onclick = (eventClick) => {
-//   function goTest() {
-//     menu.onclick = () => console.log(this.alert.name = 'test');
-//   }
-//   goTest()
-//   console.log(eventClick)
+// f1(1, 2, 3)
+// f1()
+
+
+// function f2(a, max, min, out = title) {
+//   let num = min + Math.floor(Math.random() * (max - min))
+//   out.innerHTML = `<i>${num * a}</i>`;
+//   console.log(arguments[0])
 // }
-
-
-
-
-// function Utime(roundTime = 100) {
-//   let time = Math.floor(new Date().getTime() / roundTime)
-//   console.log(time)
-// }
-
-// Utime(1000);
-
-// // push.onclick = () => {
-// //   Utime(1000)
-// // };
-
-// function randomInteger(max, min) {
-//   integer = min + Math.round(Math.random() * (max - min));
-//   console.log(integer);
-// }
-// // randomInteger(5, 1)
-// randomInteger(0, 5)
-
-// console.log(randomInteger);
-
-// function randomInteger(min, max) {
-//   console.log(max + min);
-// }
-
-
-// rand(0, 10)
-// rand(10, 20)
-// rand(20, 30)
-
-
-// let fuWidth = 500;
-// menu.onmousemove = () => {
-//   function countFu() {
-//     menu.style.width = fuWidth + 'px';
-//     fuWidth--;
-//     if (fuWidth === 100) { fuWidth = 500 }
-//   }
-//   countFu();
-// };
-
-
-function getRandomInt(min, max) {
-  num = min + Math.floor(Math.random() * (max - min));
-  console.log(num);
-  return num
-}
-// getRandomInt(117, 132)
-
-// push.onclick = function (e) {
-//   getRandomInt(1, 100)
-//   menu.textContent = num
-// }
-
-// push.addEventListener("click", function (e) {
-//   menu.textContent = getRandomInt(1, 10) + 'first';
-//   menu.onclick = function () {
-//     push.textContent = getRandomInt(11, 20) + 'second'
-//     push.onclick = function () {
-//       menu.textContent = getRandomInt(1, 10) + 'first';
-//     }
-//   }
-// })
-
-// function a3() {
-//   menu.onclick = function () {
-//     menu.style.backgroundColor = `rgb(${getRandomInt(0, 255)},${getRandomInt(0, 255)},${getRandomInt(0, 255)})`;
-//   }
-// }
-// push.onclick = a3;
-
-// function test() {
-//   let num = input.value;
-//   num % 2 == 0 ? menu.textContent = 'odd' : menu.textContent = 'even';
-// }
-// push.onclick = test;
-
-
-// function test() {
-//   let num = getRandomInt(10, 100)
-//   num % 2 === 0 ? menu.textContent = 'odd' : menu.textContent = 'even';
-// }
+// // function f2() {
+// //   let num = arguments[1] + Math.floor(Math.random() * (arguments[2] - arguments[1]))
+// //   arguments[3].innerHTML = `<i>${num * arguments[0]}</i>`;
+// //   console.log(arguments)
+// // }
 
 // push.onclick = () => {
-//   test();
-//   if (menu.textContent === 'odd') {
-//     menu.style.backgroundColor = 'red';
-//   } else if (menu.textContent === 'even') {
-//     menu.style.backgroundColor = 'green'
-//   }
+//   f2(2, 100, 200, menu)
+//   f2(2, 100, 200, title)
 // }
-// let boxwidth = 100;
-// push.onclick = function () {
-//   menu.style.width = boxwidth + 'px';
-
-//   if (boxwidth === 400) {
-//     console.log(boxwidth)
-//   } else {
-//     boxwidth = boxwidth + 20;
-//   }
+// function showTime() {
+//   console.log(arguments);
+//   let showSum = Array.from(arguments).reduce(function (accum, item) {
+//     return accum = accum + item;
+//   });
+//   console.log(showSum);
 // }
-// let num = 0;
-// function plus() {
-//   menu.textContent = num;
-//   num === 35 ? num = 0 : num++;
-// }
-// push.onclick = plus;
-
-
-// select.onchange = function () {
-//   menu.textContent = select.value;
-// }
-
-const arr10 = [1, 2, 3, 4, 5, 6, 'war', 'rew', 'rar', 'waw']
-
-push.onclick = function () {
-  let array = arr10.filter(function (el) {
-    return typeof (el) != 'string';
-  })
-  console.log(array)
+// ----------------------------------------------------------------------------rest(...args)
+function showTime(...args) {
+  console.log(args);
+  let showSum = args.reduce(function (accum, item) {
+    return accum = accum + item;
+  });
+  console.log(showSum);
 }
+showTime(1, 2, 3, 4, 5, 56, 67, 8, 4, 9, 4, 6, 5, 4, 3, 3, 2, 4, 2, 354, 56, 54, 6, 68, 7, 54, 3, 4, 4, 234, 4)
