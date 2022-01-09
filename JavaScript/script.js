@@ -46,10 +46,48 @@ const title = document.querySelector('.title');
 
 // ------------------------------------------------------------------------------callback
 
-function showResult(result) {
-  menu.innerHTML = `<b>!!!${result}!!!</b>`
+// function showResult(result) {
+//   menu.innerHTML = `<b>!!!${result}!!!</b>`
+// }
+// function showSum(number, callback) {
+//   callback(number)
+// }
+// showSum(6, showResult);
+
+// -t1
+// function start(a, c, b) {
+//   return console.log(a + c / b);
+// }
+// push.onclick = () => {
+//   start(2, 4, input.value)
+// }
+// -t2
+// let rundomNumber = function (min, max) {
+//   return min + Math.floor(Math.random() * (max - min));
+// }
+
+// function threeArg(a, b, out) {
+//   out.innerHTML = a + ':' + b;
+// }
+// push.onclick = (...args) => {
+//   threeArg(rundomNumber(1, 10), rundomNumber(10, 20), title);
+//   console.log(args);
+// }
+
+// -t3
+// function rundomNumber(min, max) {
+//   return min + Math.floor(Math.random() * (max - min));
+// }
+// push.onclick = () => {
+//   menu.innerHTML = `${rundomNumber(0, input.value)}  times!!`
+// }
+
+// -t4
+
+function outZero(a, b, out, c = 0) {
+  c === b ? summ = c : summ = a + b;
+  out.innerHTML = summ;
 }
-function showSum(number, callback) {
-  callback(number)
+push.onclick = () => {
+  outZero(5, +input.value, title)
 }
-showSum(6, showResult);
