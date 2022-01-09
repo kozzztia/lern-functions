@@ -125,6 +125,15 @@ function getRandomInt(min, max) {
 // push.onclick = plus;
 
 
-select.onchange = function () {
-  menu.textContent = select.value;
+// select.onchange = function () {
+//   menu.textContent = select.value;
+// }
+
+const arr10 = [1, 2, 3, 4, 5, 6, 'war', 'rew', 'rar', 'waw']
+
+push.onclick = function () {
+  let array = arr10.filter(function (el) {
+    return typeof (el) != 'string';
+  })
+  console.log(array)
 }
