@@ -1,6 +1,7 @@
 const push = document.querySelector('.push');
 const menu = document.querySelector('.menu');
 const input = document.querySelector('.input');
+const select = document.querySelector('.select');
 // function testFunction(a, b) {
 //   let c = a + b;
 //   menu.innerHTML = c;
@@ -106,13 +107,24 @@ function getRandomInt(min, max) {
 //     menu.style.backgroundColor = 'green'
 //   }
 // }
-let boxwidth = 100;
-push.onclick = function () {
-  menu.style.width = boxwidth + 'px';
+// let boxwidth = 100;
+// push.onclick = function () {
+//   menu.style.width = boxwidth + 'px';
 
-  if (boxwidth === 400) {
-    console.log(boxwidth)
-  } else {
-    boxwidth = boxwidth + 20;
-  }
+//   if (boxwidth === 400) {
+//     console.log(boxwidth)
+//   } else {
+//     boxwidth = boxwidth + 20;
+//   }
+// }
+// let num = 0;
+// function plus() {
+//   menu.textContent = num;
+//   num === 35 ? num = 0 : num++;
+// }
+// push.onclick = plus;
+
+
+select.onchange = function () {
+  menu.textContent = select.value;
 }
