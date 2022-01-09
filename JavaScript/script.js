@@ -35,11 +35,21 @@ const title = document.querySelector('.title');
 //   console.log(showSum);
 // }
 // ----------------------------------------------------------------------------rest(...args)
-function showTime(...args) {
-  console.log(args);
-  let showSum = args.reduce(function (accum, item) {
-    return accum = accum + item;
-  });
-  console.log(showSum);
+// function showTime(...args) {
+//   console.log(args);
+//   let showSum = args.reduce(function (accum, item) {
+//     return accum = accum + item;
+//   });
+//   console.log(showSum);
+// }
+// showTime(1, 2, 3, 4, 5, 56, 67, 8, 4, 9, 4, 6, 5, 4, 3, 3, 2, 4, 2, 354, 56, 54, 6, 68, 7, 54, 3, 4, 4, 234, 4)
+
+// ------------------------------------------------------------------------------callback
+
+function showResult(result) {
+  menu.innerHTML = `<b>!!!${result}!!!</b>`
 }
-showTime(1, 2, 3, 4, 5, 56, 67, 8, 4, 9, 4, 6, 5, 4, 3, 3, 2, 4, 2, 354, 56, 54, 6, 68, 7, 54, 3, 4, 4, 234, 4)
+function showSum(number, callback) {
+  callback(number)
+}
+showSum(6, showResult);
